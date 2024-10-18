@@ -10,6 +10,7 @@ import 'package:sharyApp/widgets/custum_button.dart';
 class LogInView extends StatefulWidget {
   const LogInView({super.key});
   static String id = 'LoginPage';
+
   @override
   State<LogInView> createState() => _LogInScreenState();
 }
@@ -29,99 +30,101 @@ class _LogInScreenState extends State<LogInView> {
     return ModalProgressHUD(
       inAsyncCall: isLoading,
       child: Scaffold(
-          body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.05),
-        child: Form(
-          key: formKey,
-          child: Column(
-            children: [
-              const Spacer(flex: 1),
-              Image.asset(
-                'assets/images/shary_logo.png',
-                height: screenHeight * 0.25, // Responsive image size
-              ),
-
-              const Spacer(flex: 1),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
+        resizeToAvoidBottomInset: true,
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.05),
+            child: Form(
+              key: formKey,
+              child: Column(
                 children: [
-                  Text(
-                    'LOGIN',
-                    style: TextStyle(
-                      fontSize: screenWidth * 0.06, // Responsive font size
-                    ),
+                  SizedBox(height: screenHeight * 0.1),
+                  Image.asset(
+                    'assets/images/shary_logo.png',
+                    height: screenHeight * 0.25,
                   ),
-                ],
-              ),
-              SizedBox(height: screenHeight * 0.02), // Responsive spacing
-              CustomTextFormField(
-                onChanged: (data) {
-                  email = data;
-                },
-                hinttext: const Text('Email'),
-              ),
-              SizedBox(height: screenHeight * 0.02),
-              CustomTextFormField(
-                onChanged: (data) {
-                  password = data;
-                },
-                obscureText: true,
-                hinttext: const Text('Password'),
-              ),
-              SizedBox(height: screenHeight * 0.02),
-              CustomButton(
-                color: Colors.purple,
-                text: "Log in",
-                onTap: () async {
-                  if (formKey.currentState!.validate()) {
-                    isLoading = true;
-                    setState(() {});
-                    try {
-                      await loginUser();
-                      Navigator.pushReplacementNamed(
-                          context, BottomNavigation.id);
-                    } on FirebaseAuthException catch (e) {
-                      if (e.code == 'user-not-found') {
-                        showSnackBar(context, 'User not found');
-                      } else if (e.code == 'wrong-password') {
-                        showSnackBar(
-                            context, 'Wrong password provided for that user.');
-                      }
-                    } catch (e) {
-                      print(e);
-                      showSnackBar(context, 'There was an error!');
-                    }
-                    isLoading = false;
-                    setState(() {});
-                  }
-                },
-              ),
-              SizedBox(height: screenHeight * 0.02),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Text(
-                    'Don\'t have an account?',
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.pushNamed(context, RegisterView.id);
-                    },
+                  SizedBox(height: screenHeight * 0.05),
+                  Align(
+                    alignment: Alignment.centerLeft,
                     child: Text(
-                      '  Register',
+                      'LOGIN',
                       style: TextStyle(
-                        color: Colors.blue,
-                        fontSize: screenWidth * 0.04, // Responsive font size
+                        fontSize: screenWidth * 0.06,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
-                  )
+                  ),
+                  SizedBox(height: screenHeight * 0.02),
+                  CustomTextFormField(
+                    onChanged: (data) {
+                      email = data;
+                    },
+                    hinttext: const Text('Email'),
+                  ),
+                  SizedBox(height: screenHeight * 0.02),
+                  CustomTextFormField(
+                    onChanged: (data) {
+                      password = data;
+                    },
+                    obscureText: true,
+                    hinttext: const Text('Password'),
+                  ),
+                  SizedBox(height: screenHeight * 0.03),
+                  CustomButton(
+                    color: Colors.purple,
+                    text: "Log in",
+                    onTap: () async {
+                      if (formKey.currentState!.validate()) {
+                        isLoading = true;
+                        setState(() {});
+                        try {
+                          await loginUser();
+                          Navigator.pushReplacementNamed(
+                              context, BottomNavigation.id);
+                        } on FirebaseAuthException catch (e) {
+                          if (e.code == 'user-not-found') {
+                            showSnackBar(context, 'User not found');
+                          } else if (e.code == 'wrong-password') {
+                            showSnackBar(context,
+                                'Wrong password provided for that user.');
+                          }
+                        } catch (e) {
+                          print(e);
+                          showSnackBar(context, 'There was an error!');
+                        }
+                        isLoading = false;
+                        setState(() {});
+                      }
+                    },
+                  ),
+                  SizedBox(height: screenHeight * 0.02),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text(
+                        'Don\'t have an account?',
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(context, RegisterView.id);
+                        },
+                        child: Text(
+                          '  Register',
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontSize: screenWidth * 0.04,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: screenHeight * 0.05),
                 ],
               ),
-              const Spacer(flex: 3),
-            ],
+            ),
           ),
         ),
-      )),
+      ),
     );
   }
 

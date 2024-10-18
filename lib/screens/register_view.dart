@@ -21,15 +21,13 @@ class _RegisterScreenState extends State<RegisterView> {
 
   @override
   Widget build(BuildContext context) {
-    // Get screen size
     final size = MediaQuery.of(context).size;
 
     return ModalProgressHUD(
       inAsyncCall: isLoading,
       child: Scaffold(
           body: Padding(
-        padding: EdgeInsets.symmetric(
-            horizontal: size.width * 0.05), // Responsive padding
+        padding: EdgeInsets.symmetric(horizontal: size.width * 0.05),
         child: Form(
           key: formKey,
           child: Column(
@@ -37,7 +35,7 @@ class _RegisterScreenState extends State<RegisterView> {
               const Spacer(flex: 1),
               Image.asset(
                 'assets/images/shary_logo.png',
-                width: size.width * 0.5, // Responsive width
+                width: size.width * 0.5,
               ),
               const Spacer(
                 flex: 2,
@@ -78,8 +76,7 @@ class _RegisterScreenState extends State<RegisterView> {
                   onTap: () async {
                     if (formKey.currentState!.validate()) {
                       setState(() {
-                        isLoading =
-                            true; // Moved inside setState for proper UI update
+                        isLoading = true;
                       });
 
                       try {
@@ -96,8 +93,7 @@ class _RegisterScreenState extends State<RegisterView> {
                         showSnackBar(context, 'There was an Error!');
                       } finally {
                         setState(() {
-                          isLoading =
-                              false; // Ensure loading state is updated after operation
+                          isLoading = false;
                         });
                       }
                     }
