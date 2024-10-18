@@ -1,16 +1,16 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:test_gradle_app/models/cart_model.dart';
-import 'package:test_gradle_app/screens/bottom_navigation_bar.dart';
-import 'package:test_gradle_app/screens/cart_view.dart';
-import 'package:test_gradle_app/screens/checkout_view.dart';
-import 'package:test_gradle_app/screens/home_view.dart';
-import 'package:test_gradle_app/screens/login_view.dart';
-import 'package:test_gradle_app/screens/register_view.dart';
-import 'package:test_gradle_app/screens/splash_screen.dart';
-import 'package:test_gradle_app/screens/success_view.dart';
-import 'package:test_gradle_app/themes/theme_provider.dart';
+import 'package:sharyApp/models/cart_model.dart';
+import 'package:sharyApp/screens/bottom_navigation_bar.dart';
+import 'package:sharyApp/screens/cart_view.dart';
+import 'package:sharyApp/screens/checkout_view.dart';
+import 'package:sharyApp/screens/home_view.dart';
+import 'package:sharyApp/screens/login_view.dart';
+import 'package:sharyApp/screens/register_view.dart';
+import 'package:sharyApp/screens/splash_screen.dart';
+import 'package:sharyApp/screens/success_view.dart';
+import 'package:sharyApp/themes/theme_provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:test_gradle_app/helper/card_item.dart';
-import 'package:test_gradle_app/screens/bottom_navigation_bar.dart';
-import 'package:test_gradle_app/screens/success_view.dart';
-import 'package:test_gradle_app/widgets/custum_button.dart';
+import 'package:sharyApp/helper/card_item.dart';
+import 'package:sharyApp/screens/bottom_navigation_bar.dart';
+import 'package:sharyApp/screens/success_view.dart';
+import 'package:sharyApp/widgets/custum_button.dart';
 
 class PaymentView extends StatefulWidget {
   const PaymentView({super.key});

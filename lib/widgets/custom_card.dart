@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test_gradle_app/models/product_model.dart';
+import 'package:sharyApp/models/product_model.dart';
 
 // ignore: must_be_immutable
 class CustomCard extends StatelessWidget {

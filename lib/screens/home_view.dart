@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
-import 'package:test_gradle_app/models/cart_model.dart';
-import 'package:test_gradle_app/models/product_model.dart';
-import 'package:test_gradle_app/screens/cart_view.dart';
-import 'package:test_gradle_app/screens/login_view.dart';
-import 'package:test_gradle_app/service/get_all_products_services.dart';
-import 'package:test_gradle_app/widgets/custom_card.dart';
+import 'package:sharyApp/models/cart_model.dart';
+import 'package:sharyApp/models/product_model.dart';
+import 'package:sharyApp/screens/cart_view.dart';
+import 'package:sharyApp/screens/login_view.dart';
+import 'package:sharyApp/service/get_all_products_services.dart';
+import 'package:sharyApp/widgets/custom_card.dart';
 
 // ignore: must_be_immutable
 class HomeView extends StatelessWidget {

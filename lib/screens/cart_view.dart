@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:test_gradle_app/models/cart_model.dart';
-import 'package:test_gradle_app/screens/checkout_view.dart';
-import 'package:test_gradle_app/widgets/custum_button.dart';
+import 'package:sharyApp/models/cart_model.dart';
+import 'package:sharyApp/screens/checkout_view.dart';
+import 'package:sharyApp/widgets/custum_button.dart';
 
 class CartView extends StatelessWidget {
   const CartView({super.key});

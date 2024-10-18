@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:test_gradle_app/models/product_model.dart';
+import 'package:sharyApp/models/product_model.dart';
 
 class Cart with ChangeNotifier {
   final List<ProductModel> _items = [];

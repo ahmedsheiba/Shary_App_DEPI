@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:test_gradle_app/themes/themes.dart';
+import 'package:sharyApp/themes/themes.dart';
 
 class ThemesProvider with ChangeNotifier {
   bool isDarkMode = false;

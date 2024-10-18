@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:test_gradle_app/screens/bottom_navigation_bar.dart';
-import 'package:test_gradle_app/widgets/custum_button.dart';
+import 'package:sharyApp/screens/bottom_navigation_bar.dart';
+import 'package:sharyApp/widgets/custum_button.dart';
 
 class SuccessView extends StatelessWidget {
   const SuccessView({super.key});

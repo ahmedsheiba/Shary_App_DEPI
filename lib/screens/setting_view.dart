@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:test_gradle_app/themes/theme_provider.dart';
+import 'package:sharyApp/themes/theme_provider.dart';
 
 class SettingView extends StatelessWidget {
   const SettingView({super.key});

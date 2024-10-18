@@ -1,8 +1,8 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:test_gradle_app/screens/cart_view.dart';
-import 'package:test_gradle_app/screens/home_view.dart';
-import 'package:test_gradle_app/screens/setting_view.dart';
+import 'package:sharyApp/screens/cart_view.dart';
+import 'package:sharyApp/screens/home_view.dart';
+import 'package:sharyApp/screens/setting_view.dart';
 
 class BottomNavigation extends StatefulWidget {
   const BottomNavigation({super.key});

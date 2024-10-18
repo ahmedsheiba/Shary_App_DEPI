@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:test_gradle_app/screens/login_view.dart';
+import 'package:sharyApp/screens/login_view.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});

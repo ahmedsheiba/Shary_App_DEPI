@@ -1,4 +1,4 @@
-import 'package:test_gradle_app/helper/api.dart';
+import 'package:sharyApp/helper/api.dart';
 
 class AllCategoriesServices {
   Future<List<dynamic>> getAllCategories() async {

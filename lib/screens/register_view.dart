@@ -1,9 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
-import 'package:test_gradle_app/widgets/custom_snak_bar.dart';
-import 'package:test_gradle_app/widgets/custom_text_button_field.dart';
-import 'package:test_gradle_app/widgets/custum_button.dart';
+import 'package:sharyApp/widgets/custom_snak_bar.dart';
+import 'package:sharyApp/widgets/custom_text_button_field.dart';
+import 'package:sharyApp/widgets/custum_button.dart';
 
 class RegisterView extends StatefulWidget {
   const RegisterView({super.key});

@@ -1,5 +1,5 @@
-import 'package:test_gradle_app/helper/api.dart';
-import 'package:test_gradle_app/models/product_model.dart';
+import 'package:sharyApp/helper/api.dart';
+import 'package:sharyApp/models/product_model.dart';
 
 class AllProductServices {
   Future<List<ProductModel>> getAllProducts() async {
